@@ -1,0 +1,25 @@
+<odoo>
+  <record id="Importar_invoice_supplier" model="ir.ui.view">
+    <field name="name">Importar.invoice.supplier.form</field>
+    <field name="model">account.invoice</field>
+    <field name="inherit_id" ref="account.invoice_supplier_form"/>
+    <field name="arch" type="xml">
+           <field name="reference" position="after">
+             <field name="clave_proveedor"/>
+             <field name="numero_consecutivo_aceptacion"/>
+           </field>
+    </field>
+  </record>
+  
+  <record id="Importar_invoice" model="ir.ui.view">
+    <field name="name">Importar.invoice.form</field>
+    <field name="model">account.invoice</field>
+    <field name="inherit_id" ref="account.invoice_form"/>
+    <field name="arch" type="xml">
+           <field name="payment_term_id" position="after">
+             <field name="clave_proveedor"/>
+           </field>
+    </field>
+  </record>
+  
+</odoo>
